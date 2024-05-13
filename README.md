@@ -2,6 +2,8 @@
 
 [![Java CI with Maven](https://github.com/mogikanen9/spring-boot-angular-task-manager-sample/actions/workflows/maven.yml/badge.svg)](https://github.com/mogikanen9/spring-boot-angular-task-manager-sample/actions/workflows/maven.yml)
 
+[![NodeJS with Grunt](https://github.com/mogikanen9/spring-boot-angular-task-manager-sample/actions/workflows/npm.yml/badge.svg)](https://github.com/mogikanen9/spring-boot-angular-task-manager-sample/actions/workflows/npm.yml)
+
 ## Stack
 Java, SpringBoot, Angular, Keycloak
 
