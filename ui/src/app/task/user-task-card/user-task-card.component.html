@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ userTask.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ userTask.dueDate }}</h6>
+    <p class="card-text">{{ userTask.status }}</p>
+    <a class="card-link" [routerLink]="['/details/', userTask.id]"
+      >View details</a
+    >
+  </div>
+</div>

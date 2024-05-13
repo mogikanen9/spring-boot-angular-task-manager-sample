@@ -1,0 +1,7 @@
+<div *ngIf="!isAuth()" class="container">
+  <button (click)="login()">Login to access Task App</button>
+</div>
+
+<div *ngIf="isAuth()" class="container">
+    <button (click)="accessDashboard()">Proceed to the Task App</button>
+  </div>

@@ -1,0 +1,78 @@
+<section>
+  <h2>My Tasks Dashboard</h2>
+  <article>
+    <div class="btn-group" dropdown>
+      <div>
+        &nbsp; Filtered by: <b>{{ this.displayOptions.filteredBy }}</b>
+      </div>
+      &nbsp;
+      &nbsp;
+      <button
+        id="button-filterBy"
+        dropdownToggle
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        aria-controls="dropdown-basic"
+      >
+        Filter by status <span class="caret"></span>
+      </button>
+      <ul
+        id="dropdown-basic"
+        *dropdownMenu
+        class="dropdown-menu"
+        aria-labelledby="button-basic"
+      >
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            (click)="filterAndSort('CREATED', undefined ,$event)"
+            >Created</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            (click)="filterAndSort('WIP', undefined, $event)"
+            >Work in Progress</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            (click)="filterAndSort('COMPLETE', undefined, $event)"
+            >Complete</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            (click)="filterAndSort('DEFERRED', undefined,  $event)"
+            >Deferred</a
+          >
+        </li>
+        <li class="divider dropdown-divider"></li>
+        <li>
+          <a class="dropdown-item" href="#" (click)="filterAndSort('',undefined, $event)"
+            >All</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <span>Sort by: </span>&nbsp;
+      <a href="#" (click)="filterAndSort(this.displayOptions.filteredBy,'priority',$event)">By Priority</a>
+      &nbsp;
+      <a href="#" (click)="filterAndSort(this.displayOptions.filteredBy,'date',$event)">By Due Date</a>
+    </div>
+    <div class="container">
+      <app-user-task-card
+        *ngFor="let userTask of userTasks"
+        [userTask]="userTask"
+      ></app-user-task-card>
+    </div>
+  </article>
+</section>

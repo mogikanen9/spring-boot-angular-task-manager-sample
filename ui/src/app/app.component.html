@@ -1,0 +1,22 @@
+<header></header>
+<main>
+  <div *ngIf="isAuth()"  class="container">
+    <h1>Task Management App</h1>
+    <a [routerLink]="['/list']">Dashboard</a>
+    &nbsp;
+    <a [routerLink]="['/create']">Create</a>
+    &nbsp;
+    <button (click)="logout()">Logout</button>
+    &nbsp;
+    &nbsp;
+    <span>Welcome, {{profileFullName}}</span>
+  </div>
+  <div class="container">
+    <div class="ontario-columns ontario-small-2"></div>
+    <div class="ontario-columns ontario-small-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="ontario-columns ontario-small-2"></div>
+  </div>
+</main>
+<footer></footer>

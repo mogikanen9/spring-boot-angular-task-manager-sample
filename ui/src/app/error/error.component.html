@@ -1,0 +1,9 @@
+<h1>Ups!</h1>
+<alert type="danger">
+  <span *ngIf="errorTypeDisplayed.toString() == '1'">
+    <strong>Access denied!</strong>
+  </span>
+  <span *ngIf="errorTypeDisplayed.toString() == '0'">
+    <strong>Ups. Error occured</strong>
+  </span>
+</alert>

@@ -1,0 +1,42 @@
+<div *ngIf="userTask">
+  <h4>{{ userTask.title }}</h4>
+  <p>{{ userTask.id }}</p>
+  <p>{{ userTask.created }}</p>
+  <p>{{ userTask.dueDate }}</p>
+  <p>{{ userTask.desc }}</p>
+  <p>{{ userTask.status }}</p>
+  <p>{{ userTask.priority }}</p>
+  <button type="button" class="btn btn-warning" (click)="editUserTask(userTask.id)">
+    Edit
+  </button>
+  <button
+    type="button"
+    class="btn btn-danger"
+    (click)="deleteUserTask(userTask.id)"
+  >
+    Delete
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="markComplete(userTask.id)"
+  >
+    Mark as Complete
+  </button>
+</div>
+
+<ng-template #successRemovedModal>
+  <div class="modal-header">
+    <h4 id="dialog-static-name" class="modal-title pull-left">Success</h4>
+  </div>
+  <div class="modal-body text-center">Your Task was succesfully removed!</div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="closeDelSuccessDlg()"
+    >
+      Back to list
+    </button>
+  </div>
+</ng-template>
